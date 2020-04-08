@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 
@@ -6,6 +6,15 @@ export class Navigation extends Component {
     render() {
         return (
             <Navbar bg="dark" expand="lg">
+                <Navbar.Brand href="/">
+                    <img
+                        src={require('../Images/dog.svg')}
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
+                        alt="React Bootstrap logo"
+                    />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
@@ -13,7 +22,7 @@ export class Navigation extends Component {
                             to="/">Home</NavLink>
                         <NavLink className="d-inline p-2 bg-dark text-white"
                             to="/about">About</NavLink>
-                            <NavLink className="d-inline p-2 bg-dark text-white"
+                        <NavLink className="d-inline p-2 bg-dark text-white"
                             to="/contact">Contact Us</NavLink>
                     </Nav>
                 </Navbar.Collapse>
